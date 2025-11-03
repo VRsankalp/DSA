@@ -27,11 +27,28 @@ class TwoDArray {
 
         return arr;
     }
+    public static int [][] createArrayVariableCol(){
+        Scanner sc = new Scanner(System.in);
+        int row = sc.nextInt();
+        int arr[][] =new int[row][];
+        
+        for(int i = 0 ; i<row ; i++){
+            System.out.println("enter the col");
+            int col = sc.nextInt();
+            arr[i]=new int[col];
+             
+            for(int j = 0 ; j<col;j++  ){
+                arr[i][j]=sc.nextInt();
+            }
+        }
+        return arr;
+
+     }
 
     public static void main(String[] args) {
-        int arr[][] = createArrayU();
-        TwoDArray obj = new TwoDArray();
-        obj.printArray(arr);
+        int arr[][] = createArrayVariableCol();
+        // TwoDArray obj = new TwoDArray();
+        // obj.printArray(arr);
     }
 }
 
