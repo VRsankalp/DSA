@@ -7,8 +7,8 @@ public class Xor {
         for(int x : a){
             res = res^x;
         }
+        
         return res ;
-
 
     }
     public static void main(String[] args) {
@@ -16,3 +16,5 @@ public class Xor {
         System.out.println(uniqeXor(arr));
 
     }
+    
+}
