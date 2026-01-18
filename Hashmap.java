@@ -12,6 +12,10 @@ public class Hashmap {
             System.out.println(menu.get("pizaaa"));
         }
         System.out.println(menu);
+
+        for(String key : menu.keySet()){
+            System.out.println(key +""+ menu.get(key));
+        }
     }
     
 }
