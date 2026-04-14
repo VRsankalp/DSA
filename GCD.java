@@ -1,13 +1,32 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class GCD {
     public static void main(String[] args) {
-        String str = "abcd";
-        int n = str.length();
-        for(int i = 0 ; i<=n ; i++){
-            for(int j = i+1 ; j<=i ; j++){
-                System.out.println(str.substring(i, j));
+        int arr[] = {1,2,1,2,1,1};
+        int st = 0 ;
+        int k= 3 ;
+        int sum = 0 ;
+        ArrayList<Integer>as = new ArrayList<>();
+        for (int end = st ; end<arr.length; end++){
+            if( end < k ){
+                sum+=arr[end];
             }
+            if(end>=k){
+                as.add(sum);
+                sum-=arr[st];
+                 sum+=arr[end];
+                st++;
+
+
+            }
+            
+
+
         }
+        System.out.println( as);
+
+
     }
+
 }
